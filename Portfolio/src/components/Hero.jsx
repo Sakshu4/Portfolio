@@ -30,7 +30,7 @@ const Hero = () => {
             <span className="italic font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-400 to-purple-400">Sakshi Pawar</span>
           </h1>
           <div className="inline-block">
-            <span className="bg-white/5 backdrop-blur-sm px-8 py-3 rounded-full text-white text-xl md:text-2xl font-medium border border-white/10">
+            <span className="bg-white/5 backdrop-blur-sm px-6 py-1 rounded-full text-white text-xs md:text-2xl font-medium border border-white/10">
               Software Developer
             </span>
           </div>
@@ -113,8 +113,8 @@ const Hero = () => {
                 {/* UI/UX */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-white/70 text-sm">UI/UX</span>
-                    <span className="text-white/50 text-xs">85%</span>
+                    <span className="text-white/70 text-sm">JAVA</span>
+                    <span className="text-white/50 text-xs">95%</span>
                   </div>
                   <div className="relative h-[2px] bg-white/10 rounded-full">
                     <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-blue-400/80 to-blue-500/60 rounded-full" style={{ width: '85%' }}></div>
@@ -125,7 +125,7 @@ const Hero = () => {
                 {/* Frontend */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-white/70 text-sm">FRONTEND</span>
+                    <span className="text-white/70 text-sm">SQL</span>
                     <span className="text-white/50 text-xs">92%</span>
                   </div>
                   <div className="relative h-[2px] bg-white/10 rounded-full">

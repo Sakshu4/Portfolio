@@ -8,32 +8,51 @@ import {
   FaGitAlt,
   FaGithub,
   FaDownload,
-  FaFigma
+  FaFigma,
+  FaDatabase
 } from 'react-icons/fa'
 import { 
   SiTailwindcss, 
   SiFirebase,
   SiAdobeillustrator,
-  SiCanva
+  SiCanva,
+  SiMysql,
+  SiMongodb,
+  SiPostgresql,
+  SiApachetomcat,
+  SiSpring
 } from 'react-icons/si'
+import { TbBrandJavascript } from 'react-icons/tb'
 
 const Skills = () => {
   const mainSkills = [
+    // Frontend
     { icon: FaHtml5, name: 'HTML5', color: '#E34F26' },
     { icon: FaCss3Alt, name: 'CSS3', color: '#1572B6' },
     { icon: FaJs, name: 'JavaScript', color: '#F7DF1E' },
     { icon: FaReact, name: 'React.js', color: '#61DAFB' },
-    { icon: SiTailwindcss, name: 'Tailwind', color: '#06B6D4' },
-    { icon: SiFirebase, name: 'Firebase', color: '#FFCA28' },
+    { icon: SiTailwindcss, name: 'Tailwind CSS', color: '#06B6D4' },
+    // Backend
     { icon: FaJava, name: 'Java', color: '#007396' },
-    { icon: FaGitAlt, name: 'Git', color: '#F05032' },
+    { icon: SiSpring, name: 'Servlets', color: '#6DB33F' },
+    { icon: FaDatabase, name: 'JDBC', color: '#007396' },
+    // Database
+    { icon: SiMysql, name: 'MySQL', color: '#4479A1' },
+    { icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
+    // Tools & Deployment
+
+    
   ]
 
   const additionalSkills = [
-    { icon: FaGithub, name: 'GitHub', color: '#ffffff' },
     { icon: FaFigma, name: 'Figma', color: '#F24E1E' },
     { icon: SiAdobeillustrator, name: 'Illustrator', color: '#FF9A00' },
+        { icon: FaGithub, name: 'GitHub', color: '#ffffff' },
     { icon: SiCanva, name: 'Canva', color: '#00C4CC' },
+        { icon: SiFirebase, name: 'Firebase', color: '#FFCA28' },
+            { icon: SiApachetomcat, name: 'Apache Tomcat', color: '#F8DC75' },
+    { icon: FaGitAlt, name: 'Git', color: '#F05032' },
+
   ]
 
   const containerVariants = {
@@ -49,6 +68,15 @@ const Skills = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
+  }
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a')
+    link.href = '/Sakshi_Pawar.pdf' // Vite serves public folder files at root
+    link.download = 'Sakshi_Pawar_Resume.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
@@ -77,7 +105,7 @@ const Skills = () => {
             viewport={{ once: true }}
             className="flex-1"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {mainSkills.map((skill, index) => (
                 <motion.div
                   key={skill.name}
@@ -112,6 +140,7 @@ const Skills = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={handleDownloadCV}
                 className="btn-lime text-xs"
               >
                 DOWNLOAD MY CV
