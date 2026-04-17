@@ -6,16 +6,22 @@ const Projects = () => {
       id: 1,
       title: 'VANRAKSHA',
       image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=600&fit=crop',
+      liveLink: 'https://tree-adoption.vercel.app/',
+      githubLink: 'https://github.com/Samarth40/tree-adoption'
     },
     {
       id: 2,
       title: 'Portfolio',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=600&fit=crop',
+      liveLink: '#',
+      githubLink: '#'
     },
     {
       id: 3,
       title: 'GDG Event',
       image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=600&fit=crop',
+      liveLink: '#',
+      githubLink: '#'
     }
   ]
 
@@ -81,6 +87,30 @@ const Projects = () => {
                 
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                
+                {/* Link Buttons - Show on hover */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/40">
+                  {project.liveLink !== '#' && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-lime-400 text-navy-900 font-semibold rounded-full text-xs hover:bg-lime-300 transition-colors"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {project.githubLink !== '#' && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-full text-xs hover:bg-blue-600 transition-colors"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                </div>
                 
                 {/* Project Title - Only on first card */}
                 {index === 0 && (

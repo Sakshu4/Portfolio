@@ -179,7 +179,7 @@ const Hero = () => {
               </div>
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-white/70 text-sm">UI/UX</span>
+                  <span className="text-white/70 text-sm">JAVA</span>
                   <span className="text-white/50 text-xs">85%</span>
                 </div>
                 <div className="relative h-[2px] bg-white/10 rounded-full">
@@ -189,7 +189,7 @@ const Hero = () => {
               </div>
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-white/70 text-sm">FRONTEND</span>
+                  <span className="text-white/70 text-sm">SQL</span>
                   <span className="text-white/50 text-xs">92%</span>
                 </div>
                 <div className="relative h-[2px] bg-white/10 rounded-full">
