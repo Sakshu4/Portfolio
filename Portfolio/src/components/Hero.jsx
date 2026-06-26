@@ -133,6 +133,18 @@ const Hero = () => {
                     <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-lime-400 rounded-full" style={{ left: '92%', transform: 'translate(-50%, -50%)' }}></div>
                   </div>
                 </div>
+                
+                {/* Spring Boot */}
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-white/70 text-sm">SPRING BOOT</span>
+                    <span className="text-white/50 text-xs">88%</span>
+                  </div>
+                  <div className="relative h-[2px] bg-white/10 rounded-full">
+                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-purple-400/80 to-purple-500/60 rounded-full" style={{ width: '88%' }}></div>
+                    <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-purple-400 rounded-full" style={{ left: '88%', transform: 'translate(-50%, -50%)' }}></div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -195,6 +207,16 @@ const Hero = () => {
                 <div className="relative h-[2px] bg-white/10 rounded-full">
                   <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-lime-400/80 to-lime-500/60 rounded-full" style={{ width: '92%' }}></div>
                   <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-lime-400 rounded-full" style={{ left: '92%', transform: 'translate(-50%, -50%)' }}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-white/70 text-sm">SPRING BOOT</span>
+                  <span className="text-white/50 text-xs">88%</span>
+                </div>
+                <div className="relative h-[2px] bg-white/10 rounded-full">
+                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-purple-400/80 to-purple-500/60 rounded-full" style={{ width: '88%' }}></div>
+                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-purple-400 rounded-full" style={{ left: '88%', transform: 'translate(-50%, -50%)' }}></div>
                 </div>
               </div>
             </div>

@@ -9,7 +9,9 @@ import {
   FaGithub,
   FaDownload,
   FaFigma,
-  FaDatabase
+  FaDatabase,
+  FaNodeJs,
+  FaDocker
 } from 'react-icons/fa'
 import { 
   SiTailwindcss, 
@@ -20,7 +22,8 @@ import {
   SiMongodb,
   SiPostgresql,
   SiApachetomcat,
-  SiSpring
+  SiSpring,
+  SiSpringboot
 } from 'react-icons/si'
 import { TbBrandJavascript } from 'react-icons/tb'
 
@@ -34,25 +37,25 @@ const Skills = () => {
     { icon: SiTailwindcss, name: 'Tailwind CSS', color: '#06B6D4' },
     // Backend
     { icon: FaJava, name: 'Java', color: '#007396' },
+    { icon: SiSpringboot, name: 'Spring Boot', color: '#6DB33F' },
+    { icon: FaNodeJs, name: 'Node.js', color: '#339933' },
     { icon: SiSpring, name: 'Servlets', color: '#6DB33F' },
     { icon: FaDatabase, name: 'JDBC', color: '#007396' },
-    // Database
+    // Database & Tools
     { icon: SiMysql, name: 'MySQL', color: '#4479A1' },
+    { icon: SiPostgresql, name: 'PostgreSQL', color: '#336791' },
     { icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
-    // Tools & Deployment
-
-    
+    { icon: FaDocker, name: 'Docker', color: '#2496ED' },
+    { icon: FaGitAlt, name: 'Git', color: '#F05032' },
   ]
 
   const additionalSkills = [
     { icon: FaFigma, name: 'Figma', color: '#F24E1E' },
     { icon: SiAdobeillustrator, name: 'Illustrator', color: '#FF9A00' },
-        { icon: FaGithub, name: 'GitHub', color: '#ffffff' },
+    { icon: FaGithub, name: 'GitHub', color: '#ffffff' },
     { icon: SiCanva, name: 'Canva', color: '#00C4CC' },
-        { icon: SiFirebase, name: 'Firebase', color: '#FFCA28' },
-            { icon: SiApachetomcat, name: 'Apache Tomcat', color: '#F8DC75' },
-    { icon: FaGitAlt, name: 'Git', color: '#F05032' },
-
+    { icon: SiFirebase, name: 'Firebase', color: '#FFCA28' },
+    { icon: SiApachetomcat, name: 'Apache Tomcat', color: '#F8DC75' }
   ]
 
   const containerVariants = {
