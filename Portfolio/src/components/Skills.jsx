@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { 
   FaHtml5, 
   FaCss3Alt, 
@@ -7,11 +8,14 @@ import {
   FaJava,
   FaGitAlt,
   FaGithub,
-  FaDownload,
+  FaEnvelope,
   FaFigma,
   FaDatabase,
   FaNodeJs,
-  FaDocker
+  FaDocker,
+  FaPaperPlane,
+  FaCopy,
+  FaCheck
 } from 'react-icons/fa'
 import { 
   SiTailwindcss, 
@@ -73,13 +77,29 @@ const Skills = () => {
     visible: { opacity: 1, y: 0 }
   }
 
-  const handleDownloadCV = () => {
-    const link = document.createElement('a')
-    link.href = '/Sakshi_Pawar.pdf' // Vite serves public folder files at root
-    link.download = 'Sakshi_Pawar_Resume.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false)
+  const [requestData, setRequestData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    note: ''
+  })
+  const [copied, setCopied] = useState(false)
+
+  const handleRequestSubmit = (e) => {
+    e.preventDefault()
+    const subject = encodeURIComponent(`Resume Request: ${requestData.name || 'Recruiter'}${requestData.company ? ` from ${requestData.company}` : ''}`)
+    const body = encodeURIComponent(
+      `Hi Sakshi,\n\nI visited your portfolio and would like to request a copy of your updated resume.\n\nRecruiter/Contact Details:\n- Name: ${requestData.name}\n- Email: ${requestData.email}\n- Company/Organization: ${requestData.company || 'N/A'}\n- Message: ${requestData.note || 'Looking forward to reviewing your resume.'}\n\nBest regards,\n${requestData.name}`
+    )
+    window.location.href = `mailto:sakshipawar7444@gmail.com?subject=${subject}&body=${body}`
+    setIsResumeModalOpen(false)
+  }
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('sakshipawar7444@gmail.com')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2500)
   }
 
   return (
@@ -143,11 +163,11 @@ const Skills = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleDownloadCV}
+                onClick={() => setIsResumeModalOpen(true)}
                 className="btn-berry text-xs font-bold px-6 py-3 rounded-full shadow-lg shadow-[#CC3A63]/25 flex items-center gap-2"
               >
-                DOWNLOAD MY CV
-                <FaDownload className="text-xs" />
+                REQUEST MY CV
+                <FaEnvelope className="text-xs" />
               </motion.button>
             </div>
           </motion.div>
@@ -186,6 +206,133 @@ const Skills = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Resume Request Modal */}
+      <AnimatePresence>
+        {isResumeModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1A1618]/70 backdrop-blur-md"
+            onClick={() => setIsResumeModalOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-[#FFF7EB] rounded-3xl p-7 md:p-8 max-w-lg w-full border border-[#A2AB73]/35 shadow-2xl text-[#1A1618] relative"
+            >
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <div className="inline-flex items-center gap-2 bg-[#F9F0E0] px-3.5 py-1.5 rounded-full border border-[#A2AB73]/30 text-xs font-bold text-[#CC3A63] mb-3">
+                    <FaEnvelope className="text-xs" />
+                    <span>DIRECT INBOX REQUEST</span>
+                  </div>
+                  <h3 className="text-2xl font-extrabold text-[#1A1618] tracking-tight">Request My Resume</h3>
+                  <p className="text-xs text-[#645A60] mt-1">
+                    Fill in your details to notify Sakshi directly and receive her updated CV via email.
+                  </p>
+                </div>
+                <button 
+                  onClick={() => setIsResumeModalOpen(false)}
+                  className="text-[#82787E] hover:text-[#1A1618] transition-colors bg-[#F9F0E0] p-2 rounded-full hover:bg-[#EFE2CC]"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+              </div>
+
+              <form onSubmit={handleRequestSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-bold text-[#1A1618] uppercase tracking-wider mb-1.5">
+                    Your Name <span className="text-[#CC3A63]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. John Doe"
+                    value={requestData.name}
+                    onChange={(e) => setRequestData({ ...requestData, name: e.target.value })}
+                    className="w-full bg-[#F9F0E0] border border-[#A2AB73]/40 rounded-xl px-4 py-3 text-sm text-[#1A1618] placeholder-[#A49BA0] focus:outline-none focus:border-[#CC3A63] focus:ring-2 focus:ring-[#CC3A63]/20"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-[#1A1618] uppercase tracking-wider mb-1.5">
+                    Your Work Email <span className="text-[#CC3A63]">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="e.g. recruiter@company.com"
+                    value={requestData.email}
+                    onChange={(e) => setRequestData({ ...requestData, email: e.target.value })}
+                    className="w-full bg-[#F9F0E0] border border-[#A2AB73]/40 rounded-xl px-4 py-3 text-sm text-[#1A1618] placeholder-[#A49BA0] focus:outline-none focus:border-[#CC3A63] focus:ring-2 focus:ring-[#CC3A63]/20"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-[#1A1618] uppercase tracking-wider mb-1.5">
+                    Company / Organization
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Google, Startup, etc."
+                    value={requestData.company}
+                    onChange={(e) => setRequestData({ ...requestData, company: e.target.value })}
+                    className="w-full bg-[#F9F0E0] border border-[#A2AB73]/40 rounded-xl px-4 py-3 text-sm text-[#1A1618] placeholder-[#A49BA0] focus:outline-none focus:border-[#CC3A63] focus:ring-2 focus:ring-[#CC3A63]/20"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-[#1A1618] uppercase tracking-wider mb-1.5">
+                    Message / Opportunity Note
+                  </label>
+                  <textarea
+                    rows="3"
+                    placeholder="e.g. We have a Full Stack / Java Developer opening..."
+                    value={requestData.note}
+                    onChange={(e) => setRequestData({ ...requestData, note: e.target.value })}
+                    className="w-full bg-[#F9F0E0] border border-[#A2AB73]/40 rounded-xl px-4 py-3 text-sm text-[#1A1618] placeholder-[#A49BA0] focus:outline-none focus:border-[#CC3A63] focus:ring-2 focus:ring-[#CC3A63]/20 resize-none"
+                  ></textarea>
+                </div>
+
+                <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    type="submit"
+                    className="flex-1 bg-[#CC3A63] hover:bg-[#B02950] text-[#FFF7EB] font-bold py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-[#CC3A63]/25 flex items-center justify-center gap-2"
+                  >
+                    <FaPaperPlane className="text-xs" />
+                    <span>Send Request to Sakshi</span>
+                  </motion.button>
+
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    className="bg-[#F9F0E0] hover:bg-[#EFE2CC] text-[#483F44] border border-[#A2AB73]/40 px-4 py-3.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2"
+                    title="Copy email to clipboard"
+                  >
+                    {copied ? (
+                      <>
+                        <FaCheck className="text-[#8B945D] text-sm" />
+                        <span className="text-[#8B945D]">Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <FaCopy className="text-xs" />
+                        <span>Copy Email</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
