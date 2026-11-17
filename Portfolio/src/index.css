@@ -11,67 +11,67 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #050A1C;
-  color: #ffffff;
+  background-color: #FFF7EB;
+  color: #1A1618;
   overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A1428;
+  background: #F9F0E0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D8F160;
-  border-radius: 4px;
+  background: #CC3A63;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9E050;
+  background: #B02950;
 }
 
 /* Glow Effects */
 .glow-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.6;
+  filter: blur(90px);
+  opacity: 0.35;
   pointer-events: none;
   z-index: 0;
 }
 
 .glow-blob-1 {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(204, 58, 99, 0.25) 0%, transparent 70%);
   top: 10%;
-  left: 10%;
+  left: 5%;
 }
 
 .glow-blob-2 {
-  width: 350px;
-  height: 350px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(162, 171, 115, 0.35) 0%, transparent 70%);
   top: 20%;
-  right: 10%;
+  right: 5%;
 }
 
 .glow-blob-3 {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(204, 58, 99, 0.2) 0%, transparent 70%);
   bottom: 10%;
   left: 20%;
 }
 
-.glow-blob-lime {
+.glow-blob-berry {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(216, 241, 96, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(204, 58, 99, 0.18) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -80,68 +80,71 @@ body {
 /* Hero Background */
 .hero-bg {
   background: 
-    radial-gradient(ellipse at center top, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 20%, rgba(118, 75, 162, 0.15) 0%, transparent 40%),
-    radial-gradient(ellipse at 30% 80%, rgba(79, 172, 254, 0.1) 0%, transparent 40%),
-    linear-gradient(180deg, #050A1C 0%, #0A1428 50%, #050A1C 100%);
+    radial-gradient(ellipse at 50% 15%, rgba(204, 58, 99, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(162, 171, 115, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 70%, rgba(204, 58, 99, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #FFF7EB 0%, #F9F0E0 50%, #FFF7EB 100%);
 }
 
 /* Dots pattern overlay */
 .dots-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 30px 30px;
+  background-image: radial-gradient(rgba(162, 171, 115, 0.28) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
 }
 
-/* Glassmorphism Card */
+/* Warm Cards & Glassmorphism */
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(249, 240, 224, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(162, 171, 115, 0.3);
   border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(26, 22, 24, 0.04);
 }
 
 .glass-card-dark {
-  background: rgba(10, 20, 40, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(249, 240, 224, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(162, 171, 115, 0.3);
   border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(26, 22, 24, 0.06);
 }
 
-/* Skill Card Hover */
+/* Skill Card */
 .skill-card {
-  background: linear-gradient(145deg, rgba(26, 42, 74, 0.8) 0%, rgba(10, 20, 40, 0.9) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #F9F0E0;
+  border: 1px solid rgba(162, 171, 115, 0.3);
   border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(26, 22, 24, 0.03);
   transition: all 0.3s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border-color: rgba(216, 241, 96, 0.3);
+  box-shadow: 0 15px 35px rgba(204, 58, 99, 0.15);
+  border-color: rgba(204, 58, 99, 0.45);
 }
 
 /* Progress Bar */
 .progress-bar {
   height: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(162, 171, 115, 0.25);
   border-radius: 3px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #D8F160 0%, #a8c140 100%);
+  background: linear-gradient(90deg, #A2AB73 0%, #CC3A63 100%);
   border-radius: 3px;
   transition: width 1s ease;
 }
 
-/* Lime Button */
-.btn-lime {
-  background: #D8F160;
-  color: #050A1C;
+/* Primary Action Button (Berry) */
+.btn-lime, .btn-berry {
+  background: #CC3A63;
+  color: #FFF7EB;
   font-weight: 600;
   padding: 12px 28px;
   border-radius: 50px;
@@ -149,29 +152,31 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  box-shadow: 0 8px 24px rgba(204, 58, 99, 0.25);
 }
 
-.btn-lime:hover {
-  background: #C9E050;
+.btn-lime:hover, .btn-berry:hover {
+  background: #B02950;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(216, 241, 96, 0.3);
+  box-shadow: 0 12px 30px rgba(204, 58, 99, 0.35);
 }
 
 /* Outline Button */
 .btn-outline {
   background: transparent;
-  color: #ffffff;
-  font-weight: 500;
+  color: #CC3A63;
+  font-weight: 600;
   padding: 12px 28px;
   border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid #CC3A63;
   transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-  border-color: #D8F160;
-  color: #D8F160;
+  background: #CC3A63;
+  color: #FFF7EB;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(204, 58, 99, 0.25);
 }
 
 /* Floating Animation */
@@ -180,25 +185,25 @@ body {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-16px);
   }
 }
 
 @keyframes float-slow {
   0%, 100% {
-    transform: translateY(0px) rotate(-5deg);
+    transform: translateY(0px) rotate(-4deg);
   }
   50% {
-    transform: translateY(-15px) rotate(-5deg);
+    transform: translateY(-12px) rotate(-4deg);
   }
 }
 
 @keyframes float-slow-right {
   0%, 100% {
-    transform: translateY(0px) rotate(5deg);
+    transform: translateY(0px) rotate(4deg);
   }
   50% {
-    transform: translateY(-15px) rotate(5deg);
+    transform: translateY(-12px) rotate(4deg);
   }
 }
 
@@ -214,65 +219,34 @@ body {
   animation: float-slow-right 8s ease-in-out infinite;
 }
 
-/* Polaroid Style Image */
-.polaroid {
-  background: white;
-  padding: 10px;
-  padding-bottom: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-
-/* Glowing Circle Behind Image */
-.glow-circle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.5) 0%, rgba(118, 75, 162, 0.3) 40%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(20px);
-  z-index: 0;
-}
-
-/* Project Card */
-.project-card {
-  background: linear-gradient(145deg, rgba(26, 42, 74, 0.6) 0%, rgba(10, 20, 40, 0.8) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
 /* Contact Form */
 .contact-card {
-  background: #f5f5f5;
+  background: #F9F0E0;
+  border: 1px solid rgba(162, 171, 115, 0.35);
   border-radius: 30px;
   padding: 40px;
+  box-shadow: 0 16px 40px rgba(26, 22, 24, 0.05);
 }
 
 .contact-input {
-  background: #e8e8e8;
-  border: none;
+  background: #FFF7EB;
+  border: 1px solid rgba(162, 171, 115, 0.35);
   border-radius: 12px;
   padding: 16px 20px;
   width: 100%;
-  color: #333;
+  color: #1A1618;
   font-size: 14px;
   transition: all 0.3s ease;
 }
 
 .contact-input:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(216, 241, 96, 0.3);
+  border-color: #CC3A63;
+  box-shadow: 0 0 0 3px rgba(204, 58, 99, 0.2);
 }
 
 .contact-input::placeholder {
-  color: #888;
+  color: #82787E;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1px;
@@ -280,9 +254,10 @@ body {
 
 /* Additional Skills Strip */
 .skills-strip {
-  background: linear-gradient(145deg, rgba(26, 42, 74, 0.9) 0%, rgba(10, 20, 40, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #F9F0E0;
+  border: 1px solid rgba(162, 171, 115, 0.35);
   border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(26, 22, 24, 0.04);
 }
 
 /* Nav Link Hover */
@@ -298,7 +273,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #D8F160;
+  background: #CC3A63;
   transition: width 0.3s ease;
 }
 
@@ -307,14 +282,25 @@ body {
 }
 
 .nav-link:hover {
-  color: #D8F160;
+  color: #CC3A63;
 }
 
-/* Experience Card */
-.experience-card {
-  background: linear-gradient(145deg, rgba(216, 241, 96, 0.1) 0%, rgba(216, 241, 96, 0.05) 100%);
-  border: 1px solid rgba(216, 241, 96, 0.3);
+/* Experience & Review Card */
+.review-card {
+  background: rgba(249, 240, 224, 0.95);
+  border: 1px solid rgba(162, 171, 115, 0.35);
   border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(26, 22, 24, 0.06);
+}
+
+/* Expertise Card */
+.expertise-card {
+  background: rgba(249, 240, 224, 0.95);
+  border: 1px solid rgba(162, 171, 115, 0.35);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(26, 22, 24, 0.06);
 }
 
 /* Responsive Hamburger */
@@ -328,7 +314,7 @@ body {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #fff;
+  background: #1A1618;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -349,25 +335,11 @@ body {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(10, 20, 40, 0.95);
-    padding: 20px;
+    background: rgba(249, 240, 224, 0.98);
+    border: 1px solid rgba(162, 171, 115, 0.3);
+    padding: 24px;
     gap: 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 30px rgba(26, 22, 24, 0.08);
   }
-}
-
-/* Review Card */
-.review-card {
-  background: linear-gradient(145deg, rgba(10, 20, 40, 0.9) 0%, rgba(5, 10, 28, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-}
-
-/* Expertise Card */
-.expertise-card {
-  background: linear-gradient(145deg, rgba(10, 20, 40, 0.9) 0%, rgba(5, 10, 28, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
 }

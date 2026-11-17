@@ -13,9 +13,9 @@ const Hero = () => {
   return (
     <section id="hero" className="hero-bg dots-pattern min-h-screen relative overflow-hidden pt-28 pb-20">
       {/* Glow Blobs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-blue-500/30 via-purple-500/20 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute top-20 left-10 w-[300px] h-[300px] bg-purple-500/20 rounded-full blur-[100px]"></div>
-      <div className="absolute top-40 right-10 w-[250px] h-[250px] bg-blue-500/20 rounded-full blur-[100px]"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-[#CC3A63]/15 via-[#A2AB73]/12 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-20 left-10 w-[300px] h-[300px] bg-[#CC3A63]/10 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-40 right-10 w-[250px] h-[250px] bg-[#A2AB73]/15 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Title Section */}
@@ -26,11 +26,11 @@ const Hero = () => {
           className="text-center mb-6"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            <span className="text-white">I'm </span>
-            <span className="italic font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-400 to-purple-400">Sakshi Pawar</span>
+            <span className="text-[#1A1618]">I'm </span>
+            <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#CC3A63] via-[#B02950] to-[#A2AB73]">Sakshi Pawar</span>
           </h1>
           <div className="inline-block">
-            <span className="bg-white/5 backdrop-blur-sm px-6 py-1 rounded-full text-white text-xs md:text-2xl font-medium border border-white/10">
+            <span className="bg-[#F9F0E0] text-[#483F44] px-6 py-1.5 rounded-full text-xs md:text-xl font-semibold border border-[#A2AB73]/40 shadow-sm">
               Software Developer
             </span>
           </div>
@@ -46,13 +46,13 @@ const Hero = () => {
             className="absolute left-0 lg:left-10 xl:left-20 top-1/2 -translate-y-1/2 z-20 hidden lg:block"
           >
             <div className="review-card p-5 w-64 float-animation">
-              <p className="text-sm text-white/70 mb-1">Experience</p>
+              <p className="text-xs uppercase tracking-wider text-[#82787E] font-semibold mb-1">Experience</p>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-lg font-semibold text-white">GDG On Campus</span>
-                <span className="text-lime-400 text-sm font-semibold">Lead</span>
-                <FaStar className="text-lime-400 text-sm" />
+                <span className="text-lg font-bold text-[#1A1618]">GDG On Campus</span>
+                <span className="text-[#CC3A63] text-sm font-bold">Lead</span>
+                <FaStar className="text-[#CC3A63] text-sm" />
               </div>
-              <p className="text-sm text-white/50 leading-relaxed">
+              <p className="text-sm text-[#5C5257] leading-relaxed">
                 Women In-Tech Lead at<br />
                 Google Developers Group<br />
                 PDEACOE, Pune
@@ -72,7 +72,7 @@ const Hero = () => {
               <img 
                 src={profileImg} 
                 alt="Sakshi Pawar" 
-                className="w-[280px] h-[380px] md:w-[350px] md:h-[470px] lg:w-[420px] lg:h-[560px] object-cover object-top"
+                className="w-[280px] h-[380px] md:w-[350px] md:h-[470px] lg:w-[420px] lg:h-[560px] object-cover object-top drop-shadow-2xl"
               />
               
               {/* CTA Button - Positioned at bottom of image */}
@@ -80,7 +80,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={scrollToProjects}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-lime-400 hover:bg-lime-300 text-navy-900 font-semibold px-8 py-3 rounded-full text-sm tracking-wide transition-all duration-300 shadow-lg shadow-lime-400/20"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-[#CC3A63] hover:bg-[#B02950] text-[#FFF7EB] font-bold px-8 py-3.5 rounded-full text-sm tracking-wide transition-all duration-300 shadow-xl shadow-[#CC3A63]/30"
               >
                 MY PROJECTS
               </motion.button>
@@ -95,54 +95,54 @@ const Hero = () => {
             className="absolute right-0 lg:right-10 xl:right-20 top-1/2 -translate-y-1/2 z-20 hidden lg:block"
           >
             <div className="expertise-card p-5 w-64 float-animation" style={{ animationDelay: '1s' }}>
-              <h3 className="text-sm font-semibold text-white/90 mb-5 tracking-widest">MY EXPERTISE</h3>
+              <h3 className="text-xs font-bold text-[#1A1618] mb-5 tracking-widest uppercase">MY EXPERTISE</h3>
               
               <div className="space-y-4">
                 {/* React.js */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-white/70 text-sm">REACT.JS</span>
-                    <span className="text-white/50 text-xs">90%</span>
+                    <span className="text-[#483F44] text-xs font-semibold">REACT.JS</span>
+                    <span className="text-[#82787E] text-xs font-bold">90%</span>
                   </div>
-                  <div className="relative h-[2px] bg-white/10 rounded-full">
-                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-white/60 to-white/40 rounded-full" style={{ width: '90%' }}></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full" style={{ left: '90%', transform: 'translate(-50%, -50%)' }}></div>
-                  </div>
-                </div>
-                
-                {/* UI/UX */}
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-white/70 text-sm">JAVA</span>
-                    <span className="text-white/50 text-xs">95%</span>
-                  </div>
-                  <div className="relative h-[2px] bg-white/10 rounded-full">
-                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-blue-400/80 to-blue-500/60 rounded-full" style={{ width: '85%' }}></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full" style={{ left: '85%', transform: 'translate(-50%, -50%)' }}></div>
+                  <div className="relative h-[3px] bg-[#A2AB73]/20 rounded-full">
+                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#CC3A63] to-[#DE4D75] rounded-full" style={{ width: '90%' }}></div>
+                    <div className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-[#CC3A63] rounded-full shadow-sm" style={{ left: '90%', transform: 'translate(-50%, -50%)' }}></div>
                   </div>
                 </div>
                 
-                {/* Frontend */}
+                {/* Java */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-white/70 text-sm">SQL</span>
-                    <span className="text-white/50 text-xs">92%</span>
+                    <span className="text-[#483F44] text-xs font-semibold">JAVA</span>
+                    <span className="text-[#82787E] text-xs font-bold">95%</span>
                   </div>
-                  <div className="relative h-[2px] bg-white/10 rounded-full">
-                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-lime-400/80 to-lime-500/60 rounded-full" style={{ width: '92%' }}></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-lime-400 rounded-full" style={{ left: '92%', transform: 'translate(-50%, -50%)' }}></div>
+                  <div className="relative h-[3px] bg-[#A2AB73]/20 rounded-full">
+                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#A2AB73] to-[#8B945D] rounded-full" style={{ width: '95%' }}></div>
+                    <div className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-[#A2AB73] rounded-full shadow-sm" style={{ left: '95%', transform: 'translate(-50%, -50%)' }}></div>
+                  </div>
+                </div>
+                
+                {/* SQL */}
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[#483F44] text-xs font-semibold">SQL</span>
+                    <span className="text-[#82787E] text-xs font-bold">92%</span>
+                  </div>
+                  <div className="relative h-[3px] bg-[#A2AB73]/20 rounded-full">
+                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#CC3A63] to-[#A2AB73] rounded-full" style={{ width: '92%' }}></div>
+                    <div className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-[#CC3A63] rounded-full shadow-sm" style={{ left: '92%', transform: 'translate(-50%, -50%)' }}></div>
                   </div>
                 </div>
                 
                 {/* Spring Boot */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-white/70 text-sm">SPRING BOOT</span>
-                    <span className="text-white/50 text-xs">88%</span>
+                    <span className="text-[#483F44] text-xs font-semibold">SPRING BOOT</span>
+                    <span className="text-[#82787E] text-xs font-bold">88%</span>
                   </div>
-                  <div className="relative h-[2px] bg-white/10 rounded-full">
-                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-purple-400/80 to-purple-500/60 rounded-full" style={{ width: '88%' }}></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-purple-400 rounded-full" style={{ left: '88%', transform: 'translate(-50%, -50%)' }}></div>
+                  <div className="relative h-[3px] bg-[#A2AB73]/20 rounded-full">
+                    <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#A2AB73] to-[#CC3A63] rounded-full" style={{ width: '88%' }}></div>
+                    <div className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-[#CC3A63] rounded-full shadow-sm" style={{ left: '88%', transform: 'translate(-50%, -50%)' }}></div>
                   </div>
                 </div>
               </div>
@@ -159,13 +159,13 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="review-card p-4 w-full sm:w-64"
           >
-            <p className="text-sm text-white/70 mb-1">Experience</p>
+            <p className="text-xs uppercase tracking-wider text-[#82787E] font-semibold mb-1">Experience</p>
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-lg font-semibold text-white">GDG On Campus</span>
-              <span className="text-lime-400 text-sm font-semibold">Lead</span>
-              <FaStar className="text-lime-400 text-sm" />
+              <span className="text-base font-bold text-[#1A1618]">GDG On Campus</span>
+              <span className="text-[#CC3A63] text-sm font-bold">Lead</span>
+              <FaStar className="text-[#CC3A63] text-sm" />
             </div>
-            <p className="text-sm text-white/50 leading-relaxed">
+            <p className="text-sm text-[#5C5257] leading-relaxed">
               Women In-Tech Lead at Google Developers Group PDEACOE, Pune
             </p>
           </motion.div>
@@ -177,46 +177,46 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="expertise-card p-4 w-full sm:w-64"
           >
-            <h3 className="text-sm font-semibold text-white/90 mb-4 tracking-widest">MY EXPERTISE</h3>
+            <h3 className="text-xs font-bold text-[#1A1618] mb-4 tracking-widest uppercase">MY EXPERTISE</h3>
             <div className="space-y-3">
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-white/70 text-sm">REACT.JS</span>
-                  <span className="text-white/50 text-xs">90%</span>
+                  <span className="text-[#483F44] text-xs font-semibold">REACT.JS</span>
+                  <span className="text-[#82787E] text-xs font-bold">90%</span>
                 </div>
-                <div className="relative h-[2px] bg-white/10 rounded-full">
-                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-white/60 to-white/40 rounded-full" style={{ width: '90%' }}></div>
-                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full" style={{ left: '90%', transform: 'translate(-50%, -50%)' }}></div>
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-white/70 text-sm">JAVA</span>
-                  <span className="text-white/50 text-xs">85%</span>
-                </div>
-                <div className="relative h-[2px] bg-white/10 rounded-full">
-                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-blue-400/80 to-blue-500/60 rounded-full" style={{ width: '85%' }}></div>
-                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full" style={{ left: '85%', transform: 'translate(-50%, -50%)' }}></div>
+                <div className="relative h-[3px] bg-[#A2AB73]/20 rounded-full">
+                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#CC3A63] to-[#DE4D75] rounded-full" style={{ width: '90%' }}></div>
+                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-[#CC3A63] rounded-full" style={{ left: '90%', transform: 'translate(-50%, -50%)' }}></div>
                 </div>
               </div>
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-white/70 text-sm">SQL</span>
-                  <span className="text-white/50 text-xs">92%</span>
+                  <span className="text-[#483F44] text-xs font-semibold">JAVA</span>
+                  <span className="text-[#82787E] text-xs font-bold">95%</span>
                 </div>
-                <div className="relative h-[2px] bg-white/10 rounded-full">
-                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-lime-400/80 to-lime-500/60 rounded-full" style={{ width: '92%' }}></div>
-                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-lime-400 rounded-full" style={{ left: '92%', transform: 'translate(-50%, -50%)' }}></div>
+                <div className="relative h-[3px] bg-[#A2AB73]/20 rounded-full">
+                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#A2AB73] to-[#8B945D] rounded-full" style={{ width: '95%' }}></div>
+                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-[#A2AB73] rounded-full" style={{ left: '95%', transform: 'translate(-50%, -50%)' }}></div>
                 </div>
               </div>
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-white/70 text-sm">SPRING BOOT</span>
-                  <span className="text-white/50 text-xs">88%</span>
+                  <span className="text-[#483F44] text-xs font-semibold">SQL</span>
+                  <span className="text-[#82787E] text-xs font-bold">92%</span>
                 </div>
-                <div className="relative h-[2px] bg-white/10 rounded-full">
-                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-purple-400/80 to-purple-500/60 rounded-full" style={{ width: '88%' }}></div>
-                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-purple-400 rounded-full" style={{ left: '88%', transform: 'translate(-50%, -50%)' }}></div>
+                <div className="relative h-[3px] bg-[#A2AB73]/20 rounded-full">
+                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#CC3A63] to-[#A2AB73] rounded-full" style={{ width: '92%' }}></div>
+                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-[#CC3A63] rounded-full" style={{ left: '92%', transform: 'translate(-50%, -50%)' }}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[#483F44] text-xs font-semibold">SPRING BOOT</span>
+                  <span className="text-[#82787E] text-xs font-bold">88%</span>
+                </div>
+                <div className="relative h-[3px] bg-[#A2AB73]/20 rounded-full">
+                  <div className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#A2AB73] to-[#CC3A63] rounded-full" style={{ width: '88%' }}></div>
+                  <div className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-[#CC3A63] rounded-full" style={{ left: '88%', transform: 'translate(-50%, -50%)' }}></div>
                 </div>
               </div>
             </div>

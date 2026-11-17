@@ -24,8 +24,8 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden bg-navy-900">
-      <div className="absolute inset-0 dots-pattern opacity-20"></div>
+    <section id="contact" className="py-20 relative overflow-hidden bg-[#FFF7EB]">
+      <div className="absolute inset-0 dots-pattern opacity-30"></div>
       
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <motion.div
@@ -33,9 +33,9 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="contact-card"
+          className="contact-card bg-[#F9F0E0] border border-[#A2AB73]/35 rounded-3xl p-8 md:p-12 shadow-xl"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-900 text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1618] text-center mb-10 tracking-tight">
             LET'S HAVE A CHAT
           </h2>
 
@@ -102,7 +102,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-lime-400 hover:bg-lime-500 text-navy-900 font-semibold py-4 rounded-xl transition-all duration-300 text-sm tracking-wide"
+                className="w-full bg-[#CC3A63] hover:bg-[#B02950] text-[#FFF7EB] font-bold py-4 rounded-xl transition-all duration-300 text-sm tracking-wider shadow-lg shadow-[#CC3A63]/25"
               >
                 SUBMIT HERE
               </motion.button>

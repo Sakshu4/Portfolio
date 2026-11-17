@@ -8,10 +8,10 @@ const SocialConnect = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const socialLinks = [
-    { icon: <FaGithub />, name: 'GitHub', url: 'https://github.com/Sakshu4', color: 'bg-navy-800 hover:bg-navy-700 border border-white/20' },
-    { icon: <FaLinkedin />, name: 'LinkedIn', url: '#', color: 'bg-[#0077B5] hover:bg-[#005E93] border border-[#0077B5]' },
-    { icon: <FaTwitter />, name: 'Twitter', url: '#', color: 'bg-[#1DA1F2] hover:bg-[#1A91DA] border border-[#1DA1F2]' },
-    { icon: <FaEnvelope />, name: 'Email', url: '#', color: 'bg-[#EA4335] hover:bg-[#D33426] border border-[#EA4335]' },
+    { icon: <FaGithub />, name: 'GitHub', url: 'https://github.com/Sakshu4', color: 'bg-[#1A1618] hover:bg-[#2C2529] text-[#FFF7EB] border border-[#A2AB73]/30' },
+    { icon: <FaLinkedin />, name: 'LinkedIn', url: 'https://linkedin.com/in/sakshipawar7', color: 'bg-[#0077B5] hover:bg-[#005E93] text-white' },
+    { icon: <FaTwitter />, name: 'Twitter', url: '#', color: 'bg-[#1DA1F2] hover:bg-[#1A91DA] text-white' },
+    { icon: <FaEnvelope />, name: 'Email', url: 'mailto:sakshipawar7444@gmail.com', color: 'bg-[#CC3A63] hover:bg-[#B02950] text-[#FFF7EB]' },
   ];
 
   return (
@@ -34,7 +34,7 @@ const SocialConnect = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ delay: index * 0.05 }}
-                className={`flex items-center gap-3 px-5 py-3 rounded-full text-white text-sm font-semibold shadow-lg transition-all ${link.color}`}
+                className={`flex items-center gap-3 px-5 py-3 rounded-full text-sm font-semibold shadow-xl transition-all ${link.color}`}
               >
                 <span className="text-xl">{link.icon}</span>
                 {link.name}
@@ -48,7 +48,7 @@ const SocialConnect = () => {
         onClick={toggleMenu}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="flex items-center gap-2 bg-lime-400 hover:bg-lime-300 text-navy-900 font-bold px-6 py-3.5 rounded-full shadow-2xl shadow-lime-400/30 transition-all border-2 border-transparent hover:border-white/50"
+        className="flex items-center gap-2 bg-[#CC3A63] hover:bg-[#B02950] text-[#FFF7EB] font-bold px-6 py-3.5 rounded-full shadow-2xl shadow-[#CC3A63]/35 transition-all border-2 border-[#FFF7EB]"
       >
         <span>CONNECT</span>
         <motion.div

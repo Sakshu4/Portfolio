@@ -83,8 +83,8 @@ const Skills = () => {
   }
 
   return (
-    <section id="skills" className="py-20 relative overflow-hidden bg-navy-900">
-      <div className="absolute inset-0 dots-pattern opacity-20"></div>
+    <section id="skills" className="py-20 relative overflow-hidden bg-[#FFF7EB]">
+      <div className="absolute inset-0 dots-pattern opacity-30"></div>
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Section Title */}
@@ -93,7 +93,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+          className="text-4xl md:text-5xl font-bold text-[#1A1618] text-center mb-16 tracking-tight"
         >
           MY SKILLS
         </motion.h2>
@@ -114,13 +114,13 @@ const Skills = () => {
                   key={skill.name}
                   variants={itemVariants}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="skill-card p-6 flex flex-col items-center justify-center aspect-square cursor-pointer"
+                  className="skill-card p-6 flex flex-col items-center justify-center aspect-square cursor-pointer bg-[#F9F0E0] border border-[#A2AB73]/30 rounded-2xl shadow-sm hover:shadow-xl hover:border-[#CC3A63]/50 transition-all duration-300"
                 >
                   <skill.icon 
-                    className="text-4xl md:text-5xl mb-3" 
+                    className="text-4xl md:text-5xl mb-3 drop-shadow-sm" 
                     style={{ color: skill.color }}
                   />
-                  <span className="text-white/60 text-xs text-center">{skill.name}</span>
+                  <span className="text-[#1A1618] font-semibold text-xs text-center">{skill.name}</span>
                 </motion.div>
               ))}
             </div>
@@ -134,20 +134,20 @@ const Skills = () => {
             viewport={{ once: true }}
             className="lg:w-72"
           >
-            <div className="experience-card p-8 h-full flex flex-col items-center justify-center text-center">
-              <span className="text-6xl md:text-7xl font-bold text-white mb-2">2+</span>
-              <span className="text-white/80 text-lg font-medium">Years</span>
-              <span className="text-white/80 text-lg font-medium">Learning &</span>
-              <span className="text-white/80 text-lg font-medium mb-6">Building</span>
+            <div className="bg-[#F9F0E0] border border-[#A2AB73]/40 rounded-3xl p-8 h-full flex flex-col items-center justify-center text-center shadow-md">
+              <span className="text-6xl md:text-7xl font-extrabold text-[#CC3A63] mb-2 tracking-tight">2+</span>
+              <span className="text-[#1A1618] text-lg font-bold">Years</span>
+              <span className="text-[#483F44] text-base font-medium">Learning &</span>
+              <span className="text-[#483F44] text-base font-medium mb-6">Building</span>
               
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleDownloadCV}
-                className="btn-lime text-xs"
+                className="btn-berry text-xs font-bold px-6 py-3 rounded-full shadow-lg shadow-[#CC3A63]/25 flex items-center gap-2"
               >
                 DOWNLOAD MY CV
-                <FaDownload className="text-sm" />
+                <FaDownload className="text-xs" />
               </motion.button>
             </div>
           </motion.div>
@@ -159,10 +159,10 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="skills-strip mt-12 p-8"
+          className="skills-strip mt-12 p-8 bg-[#F9F0E0] border border-[#A2AB73]/35 rounded-3xl shadow-sm"
         >
-          <h3 className="text-center text-white/80 text-sm font-semibold tracking-widest mb-8">
-            ADDITIONAL SKILLS
+          <h3 className="text-center text-[#1A1618] text-xs font-bold tracking-widest mb-8 uppercase">
+            ADDITIONAL SKILLS & TOOLS
           </h3>
           
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
@@ -177,10 +177,10 @@ const Skills = () => {
                 className="flex flex-col items-center gap-2 cursor-pointer"
               >
                 <skill.icon 
-                  className="text-3xl md:text-4xl transition-all duration-300"
+                  className="text-3xl md:text-4xl transition-all duration-300 drop-shadow-sm" 
                   style={{ color: skill.color }}
                 />
-                <span className="text-white/40 text-xs hidden md:block">{skill.name}</span>
+                <span className="text-[#483F44] font-medium text-xs hidden md:block">{skill.name}</span>
               </motion.div>
             ))}
           </div>

@@ -9,7 +9,7 @@ import SocialConnect from './components/SocialConnect'
 
 function App() {
   return (
-    <div className="min-h-screen bg-navy-900 font-poppins">
+    <div className="min-h-screen bg-[#FFF7EB] text-[#1A1618] font-poppins selection:bg-[#CC3A63] selection:text-[#FFF7EB]">
       <Navbar />
       <Hero />
       <About />
